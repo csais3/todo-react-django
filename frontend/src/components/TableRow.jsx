@@ -1,7 +1,7 @@
-function Tablerow(todo) {
+function Tablerow({todo}) {
 
     const handleDetailClick = () => {
-        
+
     }
     return (
 
