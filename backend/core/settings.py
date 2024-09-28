@@ -41,9 +41,23 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'core.urls'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3001",  # React app running on port 3000
+]
 
 TEMPLATES = [
     {
